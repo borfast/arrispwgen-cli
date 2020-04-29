@@ -19,11 +19,11 @@ Do you need an Arris modem password? Are you stuck with your Arris modem, in a m
 
 ## Description
 
-This is the _Command Line Interface_ for the [Arris password of the day generator](http://arrispwgen.borfast.com) for various Arris cable modems.
+This is the _Command Line Interface_ for the [Arris password of the day generator](https://arrispwgen.borfast.com) for various Arris cable modems.
 
-You may also be interested in the [Android app](https://play.google.com/store/apps/details?id=com.grounduphq.arrispwgen) (which is also [open source](https://github.com/borfast/arrispwgen-android)) or, if you're a developer, perhaps you're looking for the [library](https://github.com/borfast/arrispwgen-cli) instead.
+If you just want to generate passwords, your easiest option is probably the [online generator](https://arrispwgen.borfast.com). You may also be interested in the [Android app](https://play.google.com/store/apps/details?id=com.grounduphq.arrispwgen) (which is also [open source](https://github.com/borfast/arrispwgen-android)) or, if you're a developer, perhaps you're looking for the [library](https://github.com/borfast/arrispwgen-cli) instead.
 
-For a list of supported modems, troubleshooting options and more information, please visit the [help page](http://arrispwgen.borfast.com/help).
+For a list of supported modems, troubleshooting options and more information, please visit the [help page](https://arrispwgen.borfast.com/help).
 
 
 ## How to use
