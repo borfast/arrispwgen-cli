@@ -1,6 +1,6 @@
 {
   "name": "@borfast/arrispwgen-cli",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Arris Password of the Day Generator Command Line Interface",
   "keywords": [
     "arris",
