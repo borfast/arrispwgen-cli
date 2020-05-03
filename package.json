@@ -1,6 +1,6 @@
 {
   "name": "@borfast/arrispwgen-cli",
-  "version": "3.0.6",
+  "version": "4.0.2",
   "description": "Arris Password of the Day Generator Command Line Interface",
   "keywords": [
     "arris",
@@ -17,6 +17,9 @@
   "author": "Raúl Santos (https://www.borfast.com)",
   "main": "dist/cli.js",
   "type": "module",
+  "files": [
+    "/dist"
+  ],
   "bin": {
     "arrispwgen": "./dist/cli.js"
   },
@@ -28,11 +31,10 @@
     "build": "babel -d dist src/"
   },
   "dependencies": {
-    "@borfast/arrispwgen": "*",
-    "chalk": "*",
-    "columnify": "*",
-    "minimist": "*",
-    "moment": "*"
+    "@borfast/arrispwgen": "^4.0.2",
+    "chalk": "^4.0.0",
+    "columnify": "^1.5.4",
+    "minimist": "^1.2.5"
   },
   "devDependencies": {
     "@babel/cli": "*",

@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 // TODO: Allow setting the default seed for future use. Use this: https://www.npmjs.com/package/preferences
 import chalk from 'chalk';
-import moment from 'moment';
 import columnify from 'columnify';
 import minimist from 'minimist';
 
@@ -20,7 +19,7 @@ const dates = argv['_'];
 const seed = argv['seed'];
 
 function print_usage() {
-    console.log(chalk.yellow('\nUsage: ' + process.argv[0] + 'start_date [end_date] [--seed|-s custom_seed]\n'));
+    console.log(chalk.yellow('\nUsage: ' + process.argv[0] + ' start_date [end_date] [--seed|-s custom_seed]\n'));
     console.log('If you only want the password for a specific date, specify only \'start_date\'.');
     console.log('If \'end_date\' is also passed, a password for each day between \'start_date\' and \'end_date\' will be generated.');
     console.log('The --seed or -s parameter allows you to use a custom seed for the password generator.');
@@ -38,33 +37,36 @@ if (dates.length > 2) {
     process.exit(1);
 }
 
-const input_date_format = 'YYYY-MM-DD';
-const long_date_format = 'dddd, MMMM Do YYYY';
+const date_format_options = { weekday: 'short', year: 'numeric', month: 'long', day: '2-digit' };
+const date_formatter = new Intl.DateTimeFormat('default', date_format_options);
+
 let data = [];
 
 // If no date is given, default to outputting the password for the current date.
-if (dates.length == 0) {
-    dates.push(moment().format(input_date_format));
+if (dates.length === 0) {
+    dates.push(new Date());
 }
 
-if (dates.length == 1) {
-    const date = moment(dates[0], input_date_format);
-    const long_date = date.format(long_date_format);
-    const potd = arrispwgen.generate(date.toDate(), seed);
+if (dates.length === 1) {
+    const date = new Date(Date.parse(dates[0]));
+    const long_date = date_formatter.format(date);
+    const potd = arrispwgen.generate(date, seed);
     data.push({
         date: long_date,
         password: potd
     });
 } else {
-    const start_date = moment(dates[0], input_date_format);
-    const end_date = moment(dates[1], input_date_format);
+    const start_date = new Date(Date.parse(dates[0]));
+    const end_date = new Date(Date.parse(dates[1]));
     try {
-        const potd = arrispwgen.generate_multi(start_date.toDate(), end_date.toDate(), seed);
+        const potd = arrispwgen.generate_multi(start_date, end_date, seed);
 
-        for (let p in potd) {
+        console.log(potd);
+        for (const p of potd) {
+            console.log(p);
             data.push({
-                date: moment(parseInt(p)).format(long_date_format),
-                password: potd[p]
+                date: date_formatter.format(p['date']),
+                password: p['password']
             });
         }
     } catch (e) {
