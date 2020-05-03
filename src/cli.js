@@ -61,9 +61,7 @@ if (dates.length === 1) {
     try {
         const potd = arrispwgen.generate_multi(start_date, end_date, seed);
 
-        console.log(potd);
         for (const p of potd) {
-            console.log(p);
             data.push({
                 date: date_formatter.format(p['date']),
                 password: p['password']
