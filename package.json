@@ -1,6 +1,6 @@
 {
   "name": "@borfast/arrispwgen-cli",
-  "version": "4.0.3",
+  "version": "5.0.0",
   "description": "Arris Password of the Day Generator Command Line Interface",
   "keywords": [
     "arris",
@@ -28,19 +28,22 @@
     "url": "git+https://github.com/borfast/arrispwgen-cli.git"
   },
   "scripts": {
-    "build": "babel -d dist src/"
+    "build": "ttsc --project tsconfig.json",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint -c .eslintrc.cjs 'src/**/*.{ts,tsx}' '__tests__/**/*.{ts,tsx}'"
   },
   "dependencies": {
-    "@borfast/arrispwgen": "^4.0.2",
-    "chalk": "^4.0.0",
-    "columnify": "^1.5.4",
-    "minimist": "^1.2.5"
+    "@borfast/arrispwgen": "^5.0.0",
+    "chalk": "^4.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "*",
-    "@babel/core": "*",
-    "@babel/preset-env": "*",
-    "eslint": "*"
+    "@types/columnify": "^1.5.0",
+    "@types/minimist": "^1.2.0",
+    "@types/node": "^13.13.5",
+    "@types/yargs": "^15.0.4",
+    "@zoltu/typescript-transformer-append-js-extension": "^1.0.1",
+    "ttypescript": "^1.5.10",
+    "typescript": "^3.8.3"
   },
   "engines": {
     "node": ">=13.2.0",

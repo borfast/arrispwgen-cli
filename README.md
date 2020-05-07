@@ -38,8 +38,11 @@ If you want the password for the current day, just call `arrispwgen` with no arg
 ``` bash
 $ arrispwgen
 
-DATE                      | PASSWORD
-Friday, December 9th 2016 | 64Y3MV3L7G
+┌─────────┬──────────────────────────┬──────────────┐
+│ (index) │           date           │   password   │
+├─────────┼──────────────────────────┼──────────────┤
+│    0    │ 'Fri, December 09, 2016' │ '64Y3MV3L7G' │
+└─────────┴──────────────────────────┴──────────────┘
 ```
 
 To get the password for a given day, pass `arrispwgen` the date for which you want the password. For example:
@@ -47,29 +50,38 @@ To get the password for a given day, pass `arrispwgen` the date for which you wa
 ``` bash
 $ arrispwgen 2016-12-08
 
-DATE                        | PASSWORD
-Thursday, December 8th 2016 | 1R3IG4R4RH
+┌─────────┬──────────────────────────┬──────────────┐
+│ (index) │           date           │   password   │
+├─────────┼──────────────────────────┼──────────────┤
+│    0    │ 'Thu, December 08, 2016' │ '1R3IG4R4RH' │
+└─────────┴──────────────────────────┴──────────────┘
 ```
 
-In case you need to use a custom seed you can pass the `--seed` or `-s` argument:
+In case you need to use a custom seed you can pass the `--seed` argument. The format must be `--seed=SEED`. For example:
 
 ``` bash
-$ arrispwgen 2016-12-08 --seed ABCDEFGHIJ
+$ arrispwgen 2016-12-08 --seed=ABCDEFGHIJ
 
-DATE                        | PASSWORD
-Thursday, December 8th 2016 | 9KEWMO5JKE
+┌─────────┬──────────────────────────┬──────────────┐
+│ (index) │           date           │   password   │
+├─────────┼──────────────────────────┼──────────────┤
+│    0    │ 'Thu, December 08, 2016' │ '9KEWMO5JKE' │
+└─────────┴──────────────────────────┴──────────────┘
 ```
 
-You can also get the passwords for a range of days by passing a start date and an end date:
+You can also get the passwords for a range of days by passing a start date and an end date, in that order (i.e. the start date argument must come before the end date argument):
 
 ``` bash
 $ arrispwgen 2016-12-08 2016-12-13
 
-DATE                         | PASSWORD
-Thursday, December 8th 2016  | 1R3IG4R4RH
-Friday, December 9th 2016    | 64Y3MV3L7G
-Saturday, December 10th 2016 | KMAR88TPKY
-Sunday, December 11th 2016   | ZOU3M83Z9E
-Monday, December 12th 2016   | WIVIK4INFD
-Tuesday, December 13th 2016  | G6TBPWYH6J
+┌─────────┬──────────────────────────┬──────────────┐
+│ (index) │           date           │   password   │
+├─────────┼──────────────────────────┼──────────────┤
+│    0    │ 'Thu, December 08, 2016' │ '1R3IG4R4RH' │
+│    1    │ 'Fri, December 09, 2016' │ '64Y3MV3L7G' │
+│    2    │ 'Sat, December 10, 2016' │ 'KMAR88TPKY' │
+│    3    │ 'Sun, December 11, 2016' │ 'ZOU3M83Z9E' │
+│    4    │ 'Mon, December 12, 2016' │ 'WIVIK4INFD' │
+│    5    │ 'Tue, December 13, 2016' │ 'G6TBPWYH6J' │
+└─────────┴──────────────────────────┴──────────────┘
 ```
