@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 // TODO: Allow setting the default seed for future use. Use this: https://www.npmjs.com/package/preferences
-import * as chalk from 'chalk';
 import * as arrispwgen from '@borfast/arrispwgen';
 
 function printUsageAndExit(exitCode?: number) {
@@ -78,10 +77,10 @@ if (dates.length === 1) {
         }
     } catch (e) {
         if (e instanceof arrispwgen.InvalidDateRangeError) {
-            console.log(chalk.red('The given dates are out of order. Your start date is after the end date.'));
+            console.log('The given dates are out of order. Your start date is after the end date.');
             printUsageAndExit();
         } else {
-            console.log(`Unknown error occurred: ${e.message}`)
+            console.log(`Unknown error occurred: ${e.message}`);
         }
     }
 }

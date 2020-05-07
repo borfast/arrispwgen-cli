@@ -1,6 +1,6 @@
 {
   "name": "@borfast/arrispwgen-cli",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Arris Password of the Day Generator Command Line Interface",
   "keywords": [
     "arris",
@@ -33,15 +33,12 @@
     "lint": "eslint -c .eslintrc.cjs 'src/**/*.{ts,tsx}' '__tests__/**/*.{ts,tsx}'"
   },
   "dependencies": {
-    "@borfast/arrispwgen": "^5.0.0",
-    "chalk": "^4.0.0"
+    "@borfast/arrispwgen": "^5.0.0"
   },
   "devDependencies": {
-    "@types/columnify": "^1.5.0",
-    "@types/minimist": "^1.2.0",
     "@types/node": "^13.13.5",
-    "@types/yargs": "^15.0.4",
-    "@zoltu/typescript-transformer-append-js-extension": "^1.0.1",
+    "@typescript-eslint/parser": "^2.31.0",
+    "eslint": "^6.8.0",
     "ttypescript": "^1.5.10",
     "typescript": "^3.8.3"
   },
