@@ -29,7 +29,9 @@ For a list of supported modems, troubleshooting options and more information, pl
 
 ## How to use
 
-Install the arrispwgen package with npm:
+You can quickly run arrispwgen with npx: `npx arrispwgen`.
+
+If you prefer to install the package locally on your computer, you can do so with npm:
 
 `npm install -g arrispwgen-cli`
 
