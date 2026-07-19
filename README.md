@@ -12,8 +12,9 @@
 
 [![NPM Version](https://img.shields.io/npm/v/@borfast/arrispwgen-cli.svg?style=flat)](https://npmjs.org/package/@borfast/arrispwgen-cli)
 ![License](https://img.shields.io/github/license/borfast/arrispwgen-cli)
-[![Build Status](https://travis-ci.org/borfast/arrispwgen-cli.svg?branch=master)](https://travis-ci.org/borfast/arrispwgen-cli)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/borfast/arrispwgen-cli/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/borfast/arrispwgen-cli/?branch=master)
+[![CI](https://github.com/borfast/arrispwgen-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/borfast/arrispwgen-cli/actions/workflows/ci.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/borfast/arrispwgen-cli/badge)](https://scorecard.dev/viewer/?uri=github.com/borfast/arrispwgen-cli)
+[![Socket Badge](https://badge.socket.dev/npm/package/@borfast/arrispwgen-cli/latest)](https://socket.dev/npm/package/@borfast/arrispwgen-cli/overview)
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B61NQ8A)
 
 Do you need an Arris modem password? Are you stuck with your Arris modem, in a message that says "in order to access advanced features you must enter the password of the day"? Then you came to the right place!
