@@ -46,7 +46,7 @@ args.forEach((arg: string) => {
 });
 
 
-const date_format_options = { weekday: 'short', year: 'numeric', month: 'long', day: '2-digit' };
+const date_format_options: Intl.DateTimeFormatOptions = { weekday: 'short', year: 'numeric', month: 'long', day: '2-digit' };
 const date_formatter = new Intl.DateTimeFormat('default', date_format_options);
 
 let data = [];
@@ -80,7 +80,8 @@ if (dates.length === 1) {
             console.log('The given dates are out of order. Your start date is after the end date.');
             printUsageAndExit();
         } else {
-            console.log(`Unknown error occurred: ${e.message}`);
+            const message = e instanceof Error ? e.message : String(e);
+            console.log(`Unknown error occurred: ${message}`);
         }
     }
 }
