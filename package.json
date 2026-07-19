@@ -32,7 +32,9 @@
         "prepublishOnly": "npm run build",
         "lint": "biome check .",
         "format": "biome check --write .",
-        "typecheck": "tsc --noEmit"
+        "typecheck": "tsc --noEmit",
+    "pretest": "npm run lint && npm run typecheck && npm run build",
+    "test": "vitest run"
     },
     "dependencies": {
         "@borfast/arrispwgen": "^6.0.2"
@@ -40,7 +42,8 @@
     "devDependencies": {
         "@biomejs/biome": "^2.5.4",
         "@types/node": "^26.1.1",
-        "typescript": "^7.0.2"
+        "typescript": "^7.0.2",
+        "vitest": "^4.1.10"
     },
     "engines": {
         "node": ">=13.2.0",
