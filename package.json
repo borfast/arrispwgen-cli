@@ -1,48 +1,49 @@
 {
-  "name": "@borfast/arrispwgen-cli",
-  "version": "5.0.2",
-  "description": "Arris Password of the Day Generator Command Line Interface",
-  "keywords": [
-    "arris",
-    "arrispwd",
-    "arrispwgen",
-    "password-of-the-day",
-    "password of the day"
-  ],
-  "homepage": "https://arrispwgen.borfast.com",
-  "bugs": {
-    "url": "https://github.com/borfast/arrispwgen-cli/issues"
-  },
-  "license": "MIT",
-  "author": "Raúl Santos (https://www.borfast.com)",
-  "main": "dist/cli.js",
-  "type": "module",
-  "files": [
-    "/dist"
-  ],
-  "bin": {
-    "arrispwgen": "./dist/cli.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/borfast/arrispwgen-cli.git"
-  },
-  "scripts": {
-    "build": "tsc --project tsconfig.build.json",
-    "prepublishOnly": "npm run build",
-    "lint": "eslint -c .eslintrc.cjs 'src/**/*.{ts,tsx}' '__tests__/**/*.{ts,tsx}'"
-  },
-  "dependencies": {
-    "@borfast/arrispwgen": "^6.0.2"
-  },
-  "devDependencies": {
-    "@types/node": "^26.1.1",
-    "@typescript-eslint/parser": "^2.31.0",
-    "eslint": "^6.8.0",
-    "typescript": "^7.0.2"
-  },
-  "engines": {
-    "node": ">=13.2.0",
-    "npm": ">=6"
-  }
+    "name": "@borfast/arrispwgen-cli",
+    "version": "5.0.2",
+    "description": "Arris Password of the Day Generator Command Line Interface",
+    "keywords": [
+        "arris",
+        "arrispwd",
+        "arrispwgen",
+        "password-of-the-day",
+        "password of the day"
+    ],
+    "homepage": "https://arrispwgen.borfast.com",
+    "bugs": {
+        "url": "https://github.com/borfast/arrispwgen-cli/issues"
+    },
+    "license": "MIT",
+    "author": "Raúl Santos (https://www.borfast.com)",
+    "main": "dist/cli.js",
+    "type": "module",
+    "files": [
+        "/dist"
+    ],
+    "bin": {
+        "arrispwgen": "./dist/cli.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/borfast/arrispwgen-cli.git"
+    },
+    "scripts": {
+        "build": "tsc --project tsconfig.build.json",
+        "prepublishOnly": "npm run build",
+        "lint": "biome check .",
+        "format": "biome check --write .",
+        "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@borfast/arrispwgen": "^6.0.2"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^2.5.4",
+        "@types/node": "^26.1.1",
+        "typescript": "^7.0.2"
+    },
+    "engines": {
+        "node": ">=13.2.0",
+        "npm": ">=6"
+    }
 }
