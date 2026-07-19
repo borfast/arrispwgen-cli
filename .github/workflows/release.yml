@@ -25,6 +25,7 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run typecheck
+      - run: npm run build
       - run: npx vitest run
       # prepublishOnly builds dist/; provenance is attached automatically
       # when publishing via a configured npm trusted publisher.
