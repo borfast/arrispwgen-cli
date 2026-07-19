@@ -47,6 +47,13 @@ test('rejects a seed with invalid length', () => {
     expect(output).toContain('Seed is too short');
 });
 
+test('--help prints usage once and exits successfully', () => {
+    const { status, output } = runCli('--help');
+    expect(status).toBe(0);
+    expect(output.match(/Usage:/g)).toHaveLength(1);
+    expect(output).not.toContain('Unrecognized argument');
+});
+
 test('explains when the dates are out of order', () => {
     const { output } = runCli('2016-10-21', '2016-10-19');
     expect(output).toContain('out of order');

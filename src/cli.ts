@@ -19,7 +19,7 @@ function printUsageAndExit(exitCode?: number) {
         'The dates should be specified in ISO 8601 format, i.e. "YYYY-MM-DD". Example for Christmas day 2016: "2016-12-25".',
     );
 
-    if (exitCode) {
+    if (exitCode !== undefined) {
         process.exit(exitCode);
     }
 }
