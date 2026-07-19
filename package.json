@@ -33,7 +33,7 @@
     "lint": "eslint -c .eslintrc.cjs 'src/**/*.{ts,tsx}' '__tests__/**/*.{ts,tsx}'"
   },
   "dependencies": {
-    "@borfast/arrispwgen": "^5.0.1"
+    "@borfast/arrispwgen": "^6.0.2"
   },
   "devDependencies": {
     "@types/node": "^26.1.1",
